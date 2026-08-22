@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HidroPronto | Desentupidora e Serviços Hidráulicos 24 Horas</title>
+<meta name="description" content="Desentupimento, caça-vazamento eletrônico e reparos hidráulicos de emergência. Chegamos em até 40 minutos, sem quebra-quebra e com garantia por escrito.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sora: ['Sora', 'sans-serif'],
+          inter: ['Inter', 'sans-serif'],
+        },
+      },
+    },
+  }
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; }
+  h1, h2, h3, h4, .font-display { font-family: 'Sora', sans-serif; }
+
+  .faq-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 300ms ease;
+  }
+  .faq-item[data-open="true"] .faq-content {
+    grid-template-rows: 1fr;
+  }
+  .faq-inner { overflow: hidden; }
+
+  .faq-chevron { transition: transform 250ms ease; }
+  .faq-item[data-open="true"] .faq-chevron { transform: rotate(180deg); }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+  }
+</style>
+</head>
+
+<body class="bg-white text-slate-900 antialiased">
+
+<!-- ============ PREVIEW RIBBON ============ -->
+<div class="sticky top-0 z-[60] bg-slate-900 text-white">
+  <div class="mx-auto max-w-7xl px-4 py-2.5 flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-2 text-center sm:text-left">
+    <p class="text-xs sm:text-sm text-slate-300">
+      Você está visualizando o <span class="font-semibold text-white">Modelo Confiança 3</span> da <span class="font-semibold text-white">Willon Sites</span>
+    </p>
+    <a href="https://wa.me/5511974121551?text=Ol%C3%A1!%20Quero%20o%20site%20Modelo%20Confianca%203" target="_blank" rel="noopener"
+       class="shrink-0 inline-flex items-center gap-1.5 rounded-full bg-amber-400 hover:bg-amber-500 px-4 py-1.5 text-xs sm:text-sm font-semibold text-slate-900 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400">
+      Quero este site
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-3.5 h-3.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+    </a>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="sticky top-[41px] z-50 bg-white/85 backdrop-blur-md border-b border-slate-200">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 lg:h-[72px]">
+
+      <!-- Logo -->
+      <a href="#inicio" class="flex items-center gap-2.5 group">
+        <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-700 text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3.5c2.8 3.4 5.5 6.8 5.5 10a5.5 5.5 0 11-11 0c0-3.2 2.7-6.6 5.5-10z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.8 15.2a2.7 2.7 0 002.7 2.4" opacity="0.6"/>
+          </svg>
+        </span>
+        <span class="font-display font-bold text-lg sm:text-xl text-slate-900">Hidro<span class="text-blue-700">Pronto</span></span>
+      </a>
+
+      <!-- Nav desktop -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-700">
+        <a href="#sobre" class="hover:text-blue-700 transition-colors">Sobre Nós</a>
+        <a href="#servicos" class="hover:text-blue-700 transition-colors">Serviços</a>
+        <a href="#como-atuamos" class="hover:text-blue-700 transition-colors">Como Atuamos</a>
+        <a href="#depoimentos" class="hover:text-blue-700 transition-colors">Depoimentos</a>
+        <a href="#faq" class="hover:text-blue-700 transition-colors">FAQ</a>
+        <a href="#contato" class="hover:text-blue-700 transition-colors">Contato</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/5511974121551?text=Ol%C3%A1!%20Preciso%20de%20atendimento%20hidr%C3%A1ulico%20urgente."
+           target="_blank" rel="noopener"
+           class="hidden sm:inline-flex items-center gap-2 rounded-full bg-amber-400 hover:bg-amber-500 px-5 py-2.5 text-sm font-semibold text-slate-900 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.45 1.33 4.95L2 22l5.25-1.38a9.9 9.9 0 004.79 1.22h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2zm0 18.2c-1.51 0-2.98-.4-4.26-1.17l-.31-.18-3.16.83.85-3.08-.2-.32a8.2 8.2 0 01-1.26-4.32c0-4.53 3.69-8.22 8.24-8.22 4.54 0 8.23 3.68 8.23 8.22 0 4.53-3.69 8.24-8.23 8.24zm4.51-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.24-.64.81-.78.97-.14.17-.29.19-.53.06-.25-.12-1.05-.38-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.24-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.77-1.83-.2-.48-.4-.42-.56-.42-.14-.01-.31-.01-.47-.01-.16 0-.43.06-.65.31-.23.24-.85.83-.85 2.02 0 1.2.87 2.35.99 2.51.12.17 1.71 2.6 4.14 3.65.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.08.15-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+          Plantão 24h
+        </a>
+
+        <!-- Hamburger -->
+        <button id="menu-btn" aria-label="Abrir menu" aria-expanded="false" class="lg:hidden flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 text-slate-700">
+          <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"/></svg>
+          <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-5 h-5 hidden"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Nav mobile -->
+    <nav id="mobile-nav" class="hidden lg:hidden pb-5 border-t border-slate-100 pt-4">
+      <div class="flex flex-col gap-1 text-sm font-medium text-slate-700">
+        <a href="#sobre" class="mobile-link py-2.5 px-2 rounded-lg hover:bg-slate-50">Sobre Nós</a>
+        <a href="#servicos" class="mobile-link py-2.5 px-2 rounded-lg hover:bg-slate-50">Serviços</a>
+        <a href="#como-atuamos" class="mobile-link py-2.5 px-2 rounded-lg hover:bg-slate-50">Como Atuamos</a>
+        <a href="#depoimentos" class="mobile-link py-2.5 px-2 rounded-lg hover:bg-slate-50">Depoimentos</a>
+        <a href="#faq" class="mobile-link py-2.5 px-2 rounded-lg hover:bg-slate-50">FAQ</a>
+        <a href="#contato" class="mobile-link py-2.5 px-2 rounded-lg hover:bg-slate-50">Contato</a>
+        <a href="https://wa.me/5511974121551?text=Ol%C3%A1!%20Preciso%20de%20atendimento%20hidr%C3%A1ulico%20urgente."
+           target="_blank" rel="noopener"
+           class="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-amber-400 px-5 py-2.5 text-sm font-semibold text-slate-900">
+          Plantão 24h
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section id="inicio" class="relative overflow-hidden bg-slate-900 text-white">
+    <div class="relative min-h-[1180px] md:min-h-[720px] flex items-start md:items-center">
+      
+      <!-- Imagens de Fundo Responsivas -->
+      <div class="absolute inset-0 pointer-events-none">
+        <!-- Imagem Mobile -->
+        <img src="./encanador_celular.webp" 
+             alt="Técnico hidráulico profissional atendendo chamado" 
+             class="block md:hidden w-full h-full object-cover object-bottom">
+
+        <!-- Imagem Desktop -->
+        <img src="./encanador.png" 
+             alt="Técnico hidráulico profissional atendendo chamado" 
+             class="hidden md:block w-full h-full object-cover object-right">
+
+        <div class="hidden md:block absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/85 to-transparent"></div>
+        <div class="hidden md:block absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
+      </div>
+
+      <!-- Conteúdo do Hero -->
+      <div class="relative z-10 max-w-7xl mx-auto px-4 w-full pt-10 pb-[560px] md:py-24">
+        <div class="max-w-xl">
+          <span class="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/20 px-4 py-1.5 text-xs sm:text-sm font-medium text-amber-300">
+            🚨 PLANTÃO 24 HORAS · CHEGAMOS EM ATÉ 40 MINUTOS
+          </span>
+
+          <h1 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl leading-tight text-white mt-5">
+            Serviços hidráulicos seguros e de alta qualidade. Sem quebrar sua casa.
+          </h1>
+
+          <p class="text-slate-300 text-base sm:text-lg mt-5 leading-relaxed">
+            Desentupimento com alta pressão, caça-vazamento eletrônico por geofone e reparos emergenciais, com visita técnica sem custo.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-8">
+            <a href="https://wa.me/5511974121551?text=Ol%C3%A1!%20Preciso%20de%20atendimento%20hidr%C3%A1ulico%20urgente."
+               target="_blank" rel="noopener"
+               class="inline-flex items-center justify-center gap-2 rounded-full bg-amber-400 hover:bg-amber-500 px-7 py-3.5 text-sm sm:text-base font-semibold text-slate-900 transition-colors shadow-lg shadow-amber-500/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.45 1.33 4.95L2 22l5.25-1.38a9.9 9.9 0 004.79 1.22h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2zm0 18.2c-1.51 0-2.98-.4-4.26-1.17l-.31-.18-3.16.83.85-3.08-.2-.32a8.2 8.2 0 01-1.26-4.32c0-4.53 3.69-8.22 8.24-8.22 4.54 0 8.23 3.68 8.23 8.22 0 4.53-3.69 8.24-8.23 8.24zm4.51-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.24-.64.81-.78.97-.14.17-.29.19-.53.06-.25-.12-1.05-.38-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.24-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.77-1.83-.2-.48-.4-.42-.56-.42-.14-.01-.31-.01-.47-.01-.16 0-.43.06-.65.31-.23.24-.85.83-.85 2.02 0 1.2.87 2.35.99 2.51.12.17 1.71 2.6 4.14 3.65.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.08.15-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+              Solicitar atendimento no WhatsApp
+            </a>
+
+            <div class="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 shadow-lg">
+              <span class="text-amber-500 text-sm tracking-tight">★★★★★</span>
+              <span class="text-xs sm:text-sm font-medium text-slate-700">5.0 no Google · Serviço especializado</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ SOBRE / SERVIÇOS ============ -->
+  <section id="sobre" class="bg-white py-16 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <span class="text-blue-700 font-semibold text-sm tracking-wide uppercase">Sobre a HidroPronto</span>
+        <h2 class="font-display font-bold text-2xl sm:text-3xl text-slate-900 mt-3">
+          Quem cuida do encanamento da sua casa precisa merecer sua confiança
+        </h2>
+        <p class="text-slate-600 mt-4 leading-relaxed">
+          Trabalhamos com equipamentos de geofone e vídeo inspeção para encontrar o problema antes de abrir qualquer parede. Isso significa menos transtorno, menos gasto com reforma e um serviço que resolve de verdade, com técnicos treinados e peças de qualidade.
+        </p>
+      </div>
+
+      <div id="servicos" class="mt-14 sm:mt-16">
+        <h3 class="font-display font-bold text-xl sm:text-2xl text-slate-900">Nossos serviços</h3>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5 mt-8">
+
+          <!-- Card 1 -->
+          <a href="https://wa.me/5511974121551?text=Ol%C3%A1!%20Preciso%20de%20desentupimento." target="_blank" rel="noopener"
+             class="group rounded-2xl border border-slate-200 bg-white p-6 hover:border-blue-700 hover:shadow-lg transition-all">
+            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-700 group-hover:bg-blue-700 group-hover:text-white transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a7 7 0 007-7c0-3.5-3.2-6.6-7-11-3.8 4.4-7 7.5-7 11a7 7 0 007 7z"/><path stroke-linecap="round" stroke-linejoin="round" d="M9.5 14.5a2.5 2.5 0 002.5 2.2"/></svg>
+            </span>
+            <h4 class="font-display font-semibold text-slate-900 mt-4">Desentupimento geral</h4>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">Pias, ralos, vasos e colunas prediais, sem uso de ácidos corrosivos.</p>
+          </a>
+
+          <!-- Card 2 -->
+          <a href="https://wa.me/5511974121551?text=Ol%C3%A1!%20Preciso%20de%20ca%C3%A7a-vazamento." target="_blank" rel="noopener"
+             class="group rounded-2xl border border-slate-200 bg-white p-6 hover:border-blue-700 hover:shadow-lg transition-all">
+            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-700 group-hover:bg-blue-700 group-hover:text-white transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-6 h-6"><circle cx="10.5" cy="10.5" r="6.5" stroke-linecap="round"/><path stroke-linecap="round" stroke-linejoin="round" d="M20 20l-4.6-4.6"/></svg>
+            </span>
+            <h4 class="font-display font-semibold text-slate-900 mt-4">Caça-vazamento eletrônico</h4>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">Localização milimétrica com geofone, sem quebra-quebra.</p>
+          </a>
+
+          <!-- Card 3 -->
+          <a href="https://wa.me/5511974121551?text=Ol%C3%A1!%20Preciso%20de%20limpeza%20de%20caixa%20d%27%C3%A1gua." target="_blank" rel="noopener"
+             class="group rounded-2xl border border-slate-200 bg-white p-6 hover:border-blue-700 hover:shadow-lg transition-all">
+            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-700 group-hover:bg-blue-700 group-hover:text-white transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M4 8a8 2.5 0 0016 0v8a8 2.5 0 01-16 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M4 8a8 2.5 0 0116 0"/></svg>
+            </span>
+            <h4 class="font-display font-semibold text-slate-900 mt-4">Limpeza de caixas d'água</h4>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">Desinfecção completa, com laudo técnico e produtos atóxicos.</p>
+          </a>
+
+          <!-- Card 4 -->
+          <a href="https://wa.me/5511974121551?text=Ol%C3%A1!%20Preciso%20de%20reparo%20no%20encanamento." target="_blank" rel="noopener"
+             class="group rounded-2xl border border-slate-200 bg-white p-6 hover:border-blue-700 hover:shadow-lg transition-all">
+            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-700 group-hover:bg-blue-700 group-hover:text-white transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a3 3 0 10-4.24 4.24L4 17l3 3 6.46-6.46a3 3 0 004.24-4.24l-2.1 2.1-2-.7-.7-2 2.1-2.1z"/></svg>
+            </span>
+            <h4 class="font-display font-semibold text-slate-900 mt-4">Reparos e encanamento</h4>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">Troca de tubulações, válvulas de descarga e registros.</p>
+          </a>
+
+          <!-- Card 5 -->
+          <a href="https://wa.me/5511974121551?text=Ol%C3%A1!%20Tenho%20uma%20emerg%C3%AAncia%20hidr%C3%A1ulica." target="_blank" rel="noopener"
+             class="group rounded-2xl border border-slate-200 bg-white p-6 hover:border-blue-700 hover:shadow-lg transition-all">
+            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-700 group-hover:bg-blue-700 group-hover:text-white transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v4m0 4h.01M10.3 3.9L2.6 18a1.7 1.7 0 001.5 2.5h15.8a1.7 1.7 0 001.5-2.5L13.7 3.9a1.7 1.7 0 00-3.4 0z"/></svg>
+            </span>
+            <h4 class="font-display font-semibold text-slate-900 mt-4">Emergências 24 horas</h4>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">Atendimento rápido para alagamentos e canos rompidos.</p>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMO ATUAMOS ============ -->
+  <section id="como-atuamos" class="bg-slate-50 py-16 sm:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+        <div class="order-2 lg:order-1">
+          <img src="./encanador3.png" alt="Equipe da HidroPronto realizando diagnóstico hidráulico" class="w-full h-full max-h-[520px] object-cover rounded-2xl shadow-xl">
+        </div>
+
+        <div class="order-1 lg:order-2">
+          <span class="text-blue-700 font-semibold text-sm tracking-wide uppercase">Como atuamos</span>
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-slate-900 mt-3">
+            Diagnóstico antes da obra, para não abrir buraco por engano
+          </h2>
+          <p class="text-slate-600 mt-4 leading-relaxed">
+            Cada visita começa com inspeção. Só depois de entender exatamente onde está o problema é que decidimos o melhor caminho, sempre explicado antes de qualquer intervenção.
+          </p>
+
+          <div class="grid sm:grid-cols-2 gap-4 mt-8">
+
+            <div class="flex items-start gap-3 rounded-xl bg-white border border-slate-200 p-4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-5 h-5 text-blue-700 shrink-0 mt-0.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <div>
+                <p class="font-semibold text-sm text-slate-900">Atendimento rápido</p>
+                <p class="text-xs text-slate-500 mt-1">Chegamos em até 40 minutos</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 rounded-xl bg-white border border-slate-200 p-4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-5 h-5 text-blue-700 shrink-0 mt-0.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <div>
+                <p class="font-semibold text-sm text-slate-900">Visita técnica gratuita</p>
+                <p class="text-xs text-slate-500 mt-1">Orçamento sem compromisso</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 rounded-xl bg-white border border-slate-200 p-4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-5 h-5 text-blue-700 shrink-0 mt-0.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <div>
+                <p class="font-semibold text-sm text-slate-900">Zero quebra-quebra</p>
+                <p class="text-xs text-slate-500 mt-1">Tecnologia que preserva sua casa</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 rounded-xl bg-white border border-slate-200 p-4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-5 h-5 text-blue-700 shrink-0 mt-0.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <div>
+                <p class="font-semibold text-sm text-slate-900">Vídeo inspeção</p>
+                <p class="text-xs text-slate-500 mt-1">Diagnóstico preciso antes de agir</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 rounded-xl bg-white border border-slate-200 p-4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-5 h-5 text-blue-700 shrink-0 mt-0.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <div>
+                <p class="font-semibold text-sm text-slate-900">Orçamento fechado antes</p>
+                <p class="text-xs text-slate-500 mt-1">Sem surpresa na conta final</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 rounded-xl bg-white border border-slate-200 p-4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-5 h-5 text-blue-700 shrink-0 mt-0.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <div>
+                <p class="font-semibold text-sm text-slate-900">Garantia por escrito</p>
+                <p class="text-xs text-slate-500 mt-1">90 dias de tranquilidade</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAIXA CTA ============ -->
+  <section class="bg-blue-700">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+        <div class="flex items-center gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-8 h-8 text-amber-300 shrink-0"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5.5C3 4.7 3.7 4 4.5 4h2.4c.6 0 1.2.4 1.4 1l1.3 3.3c.2.6 0 1.2-.4 1.6l-1.5 1.4a13 13 0 006 6l1.4-1.5c.4-.4 1-.6 1.6-.4l3.3 1.3c.6.2 1 .8 1 1.4v2.4c0 .8-.7 1.5-1.5 1.5C10.5 22 2 13.5 2 5.5A1.5 1.5 0 013 5.5z"/></svg>
+          <p class="font-display font-bold text-white text-lg sm:text-xl">Fale conosco: (11) 97412-1551</p>
+        </div>
+        <a href="https://wa.me/5511974121551?text=Ol%C3%A1!%20Preciso%20de%20um%20t%C3%A9cnico%20hidr%C3%A1ulico." target="_blank" rel="noopener"
+           class="inline-flex items-center justify-center gap-2 rounded-full bg-amber-400 hover:bg-amber-500 px-7 py-3.5 text-sm sm:text-base font-semibold text-slate-900 transition-colors shrink-0">
+          Chamar técnico no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DEPOIMENTOS + FAQ ============ -->
+  <section id="depoimentos" class="bg-white py-16 sm:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-14 lg:gap-16">
+
+        <!-- Depoimentos -->
+        <div>
+          <span class="text-blue-700 font-semibold text-sm tracking-wide uppercase">Depoimentos</span>
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-slate-900 mt-3">O que dizem os nossos clientes</h2>
+
+          <div class="mt-8 space-y-5">
+
+            <div class="rounded-2xl border border-slate-200 p-6">
+              <p class="text-amber-500 text-sm tracking-tight">★★★★★</p>
+              <p class="text-slate-700 mt-3 leading-relaxed">Chegaram em vinte minutos e resolveram o vazamento sem quebrar nada na parede. Fiquei impressionada com a organização do serviço.</p>
+              <p class="text-sm font-semibold text-slate-900 mt-4">Mariana Costa</p>
+              <p class="text-xs text-slate-500">Cliente residencial, zona sul</p>
+            </div>
+
+            <div class="rounded-2xl border border-slate-200 p-6">
+              <p class="text-amber-500 text-sm tracking-tight">★★★★★</p>
+              <p class="text-slate-700 mt-3 leading-relaxed">Nosso restaurante teve um entupimento em plena sexta-feira à noite. A equipe atendeu rápido e conseguimos continuar funcionando sem fechar as portas.</p>
+              <p class="text-sm font-semibold text-slate-900 mt-4">Ricardo Almeida</p>
+              <p class="text-xs text-slate-500">Cliente comercial, restaurante</p>
+            </div>
+
+            <div class="rounded-2xl border border-slate-200 p-6">
+              <p class="text-amber-500 text-sm tracking-tight">★★★★★</p>
+              <p class="text-slate-700 mt-3 leading-relaxed">Contratamos a limpeza da caixa d'água do condomínio e recebemos o laudo técnico completo, exigido pelo síndico anterior. Processo muito transparente.</p>
+              <p class="text-sm font-semibold text-slate-900 mt-4">Fernanda Duarte</p>
+              <p class="text-xs text-slate-500">Síndica de condomínio</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div id="faq">
+          <span class="text-blue-700 font-semibold text-sm tracking-wide uppercase">Dúvidas frequentes</span>
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-slate-900 mt-3">Perguntas frequentes</h2>
+
+          <div class="mt-8 space-y-3">
+
+            <div class="faq-item rounded-2xl border border-slate-200 overflow-hidden" data-open="false">
+              <button class="faq-toggle w-full flex items-center justify-between gap-4 text-left p-5">
+                <span class="font-semibold text-slate-900">Quanto tempo vocês demoram para chegar?</span>
+                <svg class="faq-chevron w-5 h-5 text-blue-700 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div class="faq-content">
+                <div class="faq-inner">
+                  <p class="px-5 pb-5 text-sm text-slate-600 leading-relaxed">Na maior parte da nossa região de atendimento, chegamos em até 40 minutos após o primeiro contato. Em casos de emergência, priorizamos o deslocamento.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item rounded-2xl border border-slate-200 overflow-hidden" data-open="false">
+              <button class="faq-toggle w-full flex items-center justify-between gap-4 text-left p-5">
+                <span class="font-semibold text-slate-900">Quais são as formas de pagamento aceitas?</span>
+                <svg class="faq-chevron w-5 h-5 text-blue-700 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div class="faq-content">
+                <div class="faq-inner">
+                  <p class="px-5 pb-5 text-sm text-slate-600 leading-relaxed">Aceitamos Pix, cartão de crédito, cartão de débito e dinheiro. O valor é sempre combinado antes do início do serviço.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item rounded-2xl border border-slate-200 overflow-hidden" data-open="false">
+              <button class="faq-toggle w-full flex items-center justify-between gap-4 text-left p-5">
+                <span class="font-semibold text-slate-900">O serviço tem garantia?</span>
+                <svg class="faq-chevron w-5 h-5 text-blue-700 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div class="faq-content">
+                <div class="faq-inner">
+                  <p class="px-5 pb-5 text-sm text-slate-600 leading-relaxed">Sim. Todo serviço executado pela HidroPronto sai com garantia por escrito de 90 dias, cobrindo o reparo realizado.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item rounded-2xl border border-slate-200 overflow-hidden" data-open="false">
+              <button class="faq-toggle w-full flex items-center justify-between gap-4 text-left p-5">
+                <span class="font-semibold text-slate-900">A visita técnica tem algum custo?</span>
+                <svg class="faq-chevron w-5 h-5 text-blue-700 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+              <div class="faq-content">
+                <div class="faq-inner">
+                  <p class="px-5 pb-5 text-sm text-slate-600 leading-relaxed">Não. A visita e o orçamento são gratuitos e sem compromisso. Você só paga se decidir seguir com o serviço.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer id="contato" class="bg-slate-900 text-slate-300">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+    <div class="grid lg:grid-cols-2 gap-12">
+
+      <div>
+        <div class="flex items-center gap-2.5">
+          <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-700 text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3.5c2.8 3.4 5.5 6.8 5.5 10a5.5 5.5 0 11-11 0c0-3.2 2.7-6.6 5.5-10z"/></svg>
+          </span>
+          <span class="font-display font-bold text-lg text-white">Hidro<span class="text-blue-400">Pronto</span></span>
+        </div>
+
+        <h3 class="font-display font-bold text-2xl sm:text-3xl text-white mt-6 leading-snug">
+          Um vazamento não avisa a hora. A gente também não demora.
+        </h3>
+        <p class="text-slate-400 mt-4 leading-relaxed max-w-md">
+          Solicite um orçamento gratuito agora e fale direto com um técnico pelo WhatsApp.
+        </p>
+
+        <a href="https://wa.me/5511974121551?text=Ol%C3%A1!%20Quero%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener"
+           class="inline-flex items-center justify-center gap-2 rounded-full bg-amber-400 hover:bg-amber-500 px-7 py-3.5 text-sm sm:text-base font-semibold text-slate-900 transition-colors mt-7">
+          Solicitar orçamento gratuito
+        </a>
+      </div>
+
+      <div>
+        <p class="font-display font-semibold text-white">Regiões atendidas</p>
+        <div class="grid sm:grid-cols-2 gap-3 mt-4">
+          <div class="flex items-center gap-2 text-sm text-slate-400">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-4 h-4 text-blue-400 shrink-0"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-6.5 7-11a7 7 0 10-14 0c0 4.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+            Zona Sul
+          </div>
+          <div class="flex items-center gap-2 text-sm text-slate-400">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-4 h-4 text-blue-400 shrink-0"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-6.5 7-11a7 7 0 10-14 0c0 4.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+            Zona Oeste
+          </div>
+          <div class="flex items-center gap-2 text-sm text-slate-400">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-4 h-4 text-blue-400 shrink-0"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-6.5 7-11a7 7 0 10-14 0c0 4.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+            Zona Leste
+          </div>
+          <div class="flex items-center gap-2 text-sm text-slate-400">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-4 h-4 text-blue-400 shrink-0"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-6.5 7-11a7 7 0 10-14 0c0 4.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+            Zona Norte
+          </div>
+          <div class="flex items-center gap-2 text-sm text-slate-400">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-4 h-4 text-blue-400 shrink-0"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-6.5 7-11a7 7 0 10-14 0c0 4.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+            Região Central
+          </div>
+          <div class="flex items-center gap-2 text-sm text-slate-400">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-4 h-4 text-blue-400 shrink-0"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s7-6.5 7-11a7 7 0 10-14 0c0 4.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+            Grande São Paulo
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2 text-sm text-slate-400 mt-6">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-4 h-4 text-blue-400 shrink-0"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5.5C3 4.7 3.7 4 4.5 4h2.4c.6 0 1.2.4 1.4 1l1.3 3.3c.2.6 0 1.2-.4 1.6l-1.5 1.4a13 13 0 006 6l1.4-1.5c.4-.4 1-.6 1.6-.4l3.3 1.3c.6.2 1 .8 1 1.4v2.4c0 .8-.7 1.5-1.5 1.5C10.5 22 2 13.5 2 5.5A1.5 1.5 0 013 5.5z"/></svg>
+          (11) 97412-1551 · atendimento todos os dias, 24 horas
+        </div>
+      </div>
+
+    </div>
+
+    <div class="border-t border-white/10 mt-14 pt-7 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+      <p>© <span id="year"></span> HidroPronto. Todos os direitos reservados.</p>
+      <p>Site modelo por <a href="https://wa.me/5511974121551" target="_blank" rel="noopener" class="text-slate-300 hover:text-white transition-colors">Willon Sites</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Menu mobile
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileNav = document.getElementById('mobile-nav');
+  const iconOpen = document.getElementById('icon-open');
+  const iconClose = document.getElementById('icon-close');
+
+  function closeMenu() {
+    mobileNav.classList.add('hidden');
+    iconOpen.classList.remove('hidden');
+    iconClose.classList.add('hidden');
+    menuBtn.setAttribute('aria-expanded', 'false');
+  }
+
+  menuBtn.addEventListener('click', function () {
+    const isHidden = mobileNav.classList.contains('hidden');
+    mobileNav.classList.toggle('hidden');
+    iconOpen.classList.toggle('hidden');
+    iconClose.classList.toggle('hidden');
+    menuBtn.setAttribute('aria-expanded', String(isHidden));
+  });
+
+  document.querySelectorAll('.mobile-link').forEach(function (link) {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // Accordion FAQ
+  document.querySelectorAll('.faq-toggle').forEach(function (button) {
+    button.addEventListener('click', function () {
+      const item = button.closest('.faq-item');
+      const isOpen = item.getAttribute('data-open') === 'true';
+
+      document.querySelectorAll('.faq-item').forEach(function (el) {
+        el.setAttribute('data-open', 'false');
+      });
+
+      item.setAttribute('data-open', String(!isOpen));
+    });
+  });
+
+  // Ano dinâmico
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
